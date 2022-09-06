@@ -1,7 +1,11 @@
 /* Import font from google */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
-
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
 body{
    background-color: rgb(200,200,200);
    font-family: sans-serif;
@@ -12,9 +16,13 @@ h1,h2,h3,h4,h5,h6{
    font-family: 'Open Sans', sans-serif;
 }
 #topo, #menu,.destaques, section{
-   width: 900px;
+   width: 100%;
    margin:0 auto;
 }
+#topo h1{
+   padding: 20px 0 ;
+}
+/*
 #topo h1{
    animation:introducao 2s linear infinite alternate;
    -webkit-animation:introducao 2s linear infinite alternate;
@@ -34,11 +42,18 @@ h1,h2,h3,h4,h5,h6{
    75%{color: purple; -webkit-transform:rotate(-5deg) scale(1.2);}
    100%{color: red; -webkit-transform:rotate(0deg);}
 }
+*/
 #menu li{
    display:inline;
 }
+#menu ul{
+   margin: 0 auto;
+   width: 80%;
+   text-align: center;
+   padding-bottom: 20px;
+}
 .destaques li{
-   width: 50%;
+   width: 100%;
    float: left;
    text-align: center;
    list-style: none;
@@ -100,6 +115,42 @@ button{
    float: left;
    text-align: center;
 }
+#rodape{
+   padding: 20px 0;
+}
 #rodape li {display: inline;
+}
+@media (min-width: 576px){
+   #topo h1{
+      animation:introducao 2s linear infinite alternate;
+      -webkit-animation:introducao 2s linear infinite alternate;
+      -moz-animation:introducao 2s linear infinite alternate;
+   }
+   @-webkit-keyframes introducao{
+      0%{color: red; -webkit-transform:rotate(0deg);}
+      25%{color: blue; -webkit-transform:rotate(5deg) scale(1.2);}
+      50%{color: green; -webkit-transform:rotate(0deg);}
+      75%{color: purple; -webkit-transform:rotate(-5deg) scale(1.2);}
+      100%{color: red; -webkit-transform:rotate(0deg);}
+   }
+   @keyframes introducao{
+      0%{color: red; -webkit-transform:rotate(0deg);}
+      25%{color: blue; -webkit-transform:rotate(5deg) scale(1.2);}
+      50%{color: green; -webkit-transform:rotate(0deg);}
+      75%{color: purple; -webkit-transform:rotate(-5deg) scale(1.2);}
+      100%{color: red; -webkit-transform:rotate(0deg);}
+   }
+   #topo h2{
+      display: block;
+      font-size: 1.2em;
+      padding: 20px 0;
+   }
+   .destaques li{
+      width: 50%;
+      float: left;
+      text-align: center;
+      list-style: none;
+      padding: 20px 0;
+   } 
 }
 
